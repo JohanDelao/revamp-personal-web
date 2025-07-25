@@ -1,1 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Geist:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'tailwindcss';
+
+@theme {
+	--font-urbanist: 'Urbanist', sans-serif;
+	--font-geist: 'Geist', sans-serif;
+	--font-cabin: 'Cabin', sans-serif;
+	--color-primary-text: #00a0ff;
+	--color-secondary-text: #6a7282;
+}
+
+.background-gradient {
+	background-image: linear-gradient(
+		to top,
+		#ffffff 0%,
+		#c5e4ff 15%,
+		#7bcbff 38%,
+		#63c2ff 50%,
+		#00a0ff 100%
+	);
+}
