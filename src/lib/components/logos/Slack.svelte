@@ -1,6 +1,7 @@
 <script lang="ts"></script>
 
 <svg
+	class="h-full w-full"
 	enable-background="new 0 0 2447.6 2452.5"
 	viewBox="0 0 2447.6 2452.5"
 	xmlns="http://www.w3.org/2000/svg"

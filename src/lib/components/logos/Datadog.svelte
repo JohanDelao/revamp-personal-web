@@ -1,6 +1,6 @@
 <script lang="ts"></script>
 
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 256 274"
+<svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 256 274"
 	><path
 		fill="#632CA6"
 		fill-rule="evenodd"
