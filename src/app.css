@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Geist:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&display=swap');
 @import 'tailwindcss';
 
 @theme {
 	--font-urbanist: 'Urbanist', sans-serif;
 	--font-geist: 'Geist', sans-serif;
 	--font-cabin: 'Cabin', sans-serif;
+	--font-eczar: 'Eczar', sans-serif;
 	--color-primary-text: #00a0ff;
 	--color-secondary-text: #6a7282;
 }
@@ -18,4 +20,108 @@
 		#63c2ff 50%,
 		#00a0ff 100%
 	);
+}
+
+@keyframes dominoFall {
+	from {
+		opacity: 0;
+		transform: translateX(-15px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.grid-item {
+	opacity: 0;
+	transform: translateX(-15px);
+}
+
+.grid-item.animate {
+	animation: dominoFall 0.6s ease-out forwards;
+}
+
+@keyframes fadeInDown {
+	from {
+		opacity: 0;
+		transform: translateY(-15px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.animate-fadeInDown {
+	animation: fadeInDown 0.8s ease-out forwards;
+}
+
+@keyframes popIn {
+	from {
+		opacity: 0;
+		transform: scale(0);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.animate-popIn {
+	opacity: 0;
+	transform: scale(0);
+	animation: popIn 0.6s ease-out forwards;
+	animation-delay: 1.2s;
+}
+
+/* Parallax Background Explosion Animations */
+.exploded-1 {
+	transform: translate(-70%, -70%) scale(0.8) rotate(-5deg) !important;
+	opacity: 0.8 !important;
+}
+
+.exploded-2 {
+	transform: translate(-30%, -60%) scale(0.9) rotate(3deg) !important;
+	opacity: 0.9 !important;
+}
+
+.exploded-3 {
+	transform: translate(-80%, -30%) scale(0.7) rotate(-2deg) !important;
+	opacity: 0.7 !important;
+}
+
+.exploded-4 {
+	transform: translate(-20%, -80%) scale(0.85) rotate(4deg) !important;
+	opacity: 0.85 !important;
+}
+
+/* Responsive adjustments for parallax explosion */
+@media (max-width: 768px) {
+	.exploded-1 {
+		transform: translate(-60%, -65%) scale(0.6) rotate(-3deg) !important;
+	}
+
+	.exploded-2 {
+		transform: translate(-40%, -55%) scale(0.7) rotate(2deg) !important;
+	}
+
+	.exploded-3 {
+		transform: translate(-70%, -40%) scale(0.5) rotate(-1deg) !important;
+	}
+
+	.exploded-4 {
+		transform: translate(-30%, -75%) scale(0.65) rotate(3deg) !important;
+	}
+}
+
+/* Respect user's motion preferences for parallax */
+@media (prefers-reduced-motion: reduce) {
+	.exploded-1,
+	.exploded-2,
+	.exploded-3,
+	.exploded-4 {
+		transform: translate(-50%, -50%) scale(0.8) !important;
+		opacity: 0.8 !important;
+	}
 }
