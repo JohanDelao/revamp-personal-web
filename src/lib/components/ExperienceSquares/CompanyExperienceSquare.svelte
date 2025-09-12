@@ -14,22 +14,21 @@
 	};
 
 	export let companyInfo: CompanyInfo;
-	export let style: string = '';
-	const { name, description, href, timeline, background, color, border, emoji } = companyInfo;
+	const { name, description, timeline, background, color, border, emoji } = companyInfo;
 	const displayTitle = name.charAt(0).toUpperCase() + name.slice(1);
 </script>
 
 <Tooltip.Root delayDuration={0}>
 	<Tooltip.Trigger>
-		<ExperienceSquare propLogo={name} {style} />
+		<ExperienceSquare propLogo={name} />
 	</Tooltip.Trigger>
 	<Tooltip.Content>
 		<div
-			class="flex w-fit max-w-sm flex-col gap-1 rounded-sm border-2 px-4 py-5 font-geist"
+			class="font-geist flex w-fit max-w-sm flex-col gap-1 rounded-sm border-[0.5px] px-4 py-5"
 			style="background-color: {background}; color: {color}; border-color: {border}"
 		>
 			<span class="w-fit font-eczar text-xl font-semibold">
-				<span class="whitespace-pre-line">{description} {@html emoji}</span>
+				<span class="whitespace-pre-line">{description} {emoji || ''}</span>
 			</span>
 			<span class="flex items-center gap-2 text-sm font-medium">
 				{displayTitle}
