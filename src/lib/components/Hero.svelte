@@ -1,50 +1,48 @@
 <script>
-	import Resume from './Resume.svelte';
-	import weightFigure from '../assets/WeightFigure.png';
-	import jiujitsuFigure from '../assets/JiujitsuFigure.png';
-	import transformerFigure from '../assets/TransformerFigure.png';
+	import IsometricHeroBlueprint from './isometric-illustrations/IsometricHeroBlueprint.svelte';
+	import InstagramIcon from './logos/InstagramSVG.svelte';
+	import FigmaIcon from './logos/FigmaSVG.svelte';
+	import GithubIcon from './logos/GithubSVG.svelte';
+	import LinkedInIcon from './logos/LinkedInSVG.svelte';
 </script>
 
-<section class="background-gradient min-h-dvh w-full">
-	<div class="flex size-full items-center justify-center">
-		<div class="flex flex-col gap-10">
-			<h1
-				class="animate-fadeInDown relative block pt-40 text-center font-urbanist text-6xl font-bold opacity-0"
-				style="animation-delay: 0.2s;"
-			>
-				<span class="text-[#D2F1FF]">
-					<span class="relative z-10 flex justify-center">
-						Hi. I'm Johan.
-						<span class="absolute -top-14 -right-44">
-							<figure class="animate-popIn relative">
-								<img src={weightFigure} width={80} height={80} alt="Weight Figure" />
-							</figure>
-						</span>
-						<span class="absolute top-80 -right-36">
-							<figure class="animate-popIn relative">
-								<img src={transformerFigure} width={80} height={80} alt="Weight Figure" />
-							</figure>
-						</span>
-					</span>
-					<span class="relative z-10 flex justify-center">
-						A Software Engineer
-						<span class="absolute -bottom-32 -left-44">
-							<figure class="animate-popIn relative">
-								<img src={jiujitsuFigure} width={80} height={80} alt="Weight Figure" />
-							</figure>
-						</span>
-					</span>
-				</span>
+<section class="h-dvh w-full overflow-hidden bg-primary pb-10">
+	<div class="flex size-full flex-col items-center gap-12 px-10 pt-10">
+		<div class="flex w-full items-center justify-start gap-6">
+			<a href="https://www.instagram.com/iamjohandelao/" target="_blank">
+				<InstagramIcon />
+			</a>
+			<a href="https://www.figma.com/@johan_delao" target="_blank">
+				<FigmaIcon />
+			</a>
+			<a href="https://github.com/johandelao" target="_blank">
+				<GithubIcon />
+			</a>
+			<a href="https://www.linkedin.com/in/johandelao/" target="_blank">
+				<LinkedInIcon />
+			</a>
+		</div>
+		<div class="relative flex w-full grow flex-col gap-10">
+			<h1 class="font-space-grotesk text-2xl leading-9 text-faded-white">
+				<span class="font-bold text-white">Johan Delao</span> is a Software Engineer at
+				<span><a class="underline" href="https://www.datadoghq.com/">Datadog</a></span>, focused on
+				<br />
+				delivering great UI/UX and designs.
 			</h1>
-			<p
-				class="animate-fadeInDown text-center font-cabin text-lg text-white/70 opacity-0"
-				style="animation-delay: 0.4s;"
-			>
-				Passionate about developing great UI/UX and designs
-			</p>
-			<div class="animate-fadeInDown opacity-0" style="animation-delay: 0.8s;">
-				<Resume />
-			</div>
+			<ul class="absolute bottom-0 left-0 space-y-2 font-space-grotesk text-xl text-primary-text">
+				<li>EXPERIENCE</li>
+				<li>RESUME</li>
+				<li>PROJECTS</li>
+				<li>CONTACT</li>
+			</ul>
+			<span class="absolute top-0 left-[25%]">
+				<div
+					class="animate-fadeInDown flex size-full items-center justify-center opacity-0"
+					style="animation-delay: 0.8s;"
+				>
+					<IsometricHeroBlueprint />
+				</div>
+			</span>
 		</div>
 	</div>
 </section>
